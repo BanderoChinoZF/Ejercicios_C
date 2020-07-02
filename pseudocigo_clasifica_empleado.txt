@@ -1,0 +1,58 @@
+//PSEUDOCODIGO PARA CALCULAR AUMENTO A LOS EMPLEADOS
+
+ALGORITMO "CALCULAR AUMENTO DE SUELDO SEGUN GRUPO"
+VAR
+	INT grupoT;
+	INT edad;
+	INT aniosEmpresa;
+	CHAR genero;
+	FLOAT puntaje;
+	FLOAT sueldo;
+	FLOAT hrsTrabajadas;
+INICIO
+	ESCRIBIR("¿A QUE GRUPO PERTENE EL EMPLEADO?");
+	ESCRIBIR("GRUPO 1 -> '1',  GRUPO 2 -> '2'");
+	LEER(grupoT);
+
+	SWITCH(grupoT)
+
+		CASE 1:}
+
+			ESCRIBIR("INTRUDUCE LOS SIGUIENTES DATOS");
+			ESCRIBIR("¿HORAS TRABAJADAS DEL EMPLEADO?");
+			LEER(hrsTrabajadas);
+			ESCRIBIR("¿AÑOS DENTRO DE LA EMPRESA?");
+			LEER(aniosEmpresa);
+			ESCRIBIR("¿CUAL ES LA EDAD DEL EMPLEADO?");
+			LEER(edad);
+			ESCRIBIR("¿CUAL ES EL SUELDO QUE PERCIBE?");
+			LEER(sueldo);
+			ESCRIBIR("EL EMPLEADO, ¿ES HOMBRE O MUJER?");
+			ESCRIBIR("HOMBRE -> 'H", MUJER -> 'M');
+			LEER(genero);
+
+			SI(hrsTrabajadas > 40)
+				sueldo = sueldo + 50;
+
+			SI(genero = 'M')
+				suedlo = sueldo + 800;
+
+			SI NO( edad>25 && aniosEmpresa>30 )
+				sueldo = sueldo + 800;
+
+			ENTONCES
+				sueldo = sueldo + 100;
+
+
+		CASE 2:
+			
+			ESCRIBIR("¿CUAL ES LA EDAD DEL PROSPECTO?");
+			LEER(edad);
+			ESCRIBIR("¿QUE PUNTAJE OBTUVO EN LA PRUEBA?");
+			LEER(puntaje);
+
+			SI( anios>18 && puntaje>85)
+				ESCRIBIR("CUMPLIO LOS REQUISITOS, PUEDE SER CONTRATADO");
+
+		DEFAULT:
+			ESCRIBIR("NO EXISTE NINGUN GRUPO, QUE ESPECIFICAS");

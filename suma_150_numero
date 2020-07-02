@@ -1,0 +1,26 @@
+Ejercicion de programación en pseudocódigo.
+
+//ALGORITMO
+1.- Decirle al usuario que ingrese el numero entero para realizar la suma
+2.- Verificar que el numero sea positivo.
+3.- Realizar las operaciones, segun la formula de gauss para calcular la suma de "n"
+	numeros consecutivos.
+4.- Mostrar en pantalla el resultado de dicha suma de numeros.
+
+
+
+//PSEUDOCÓDIGO
+ALGORITMO "suma de los primero 150 numeros"
+VAR
+	INT suma;
+	INT numero;
+INICIO
+	ESCRIBIR("Algoritmo para la suma de n numeros");
+	ESCRIBIR("Ingrese un numero para realizar el calculo: ");
+	LEER(numero)
+	
+	SI(numero es POSITIVO)
+		suma <- ((numero(numero+1))/2);
+	SINO
+		ESCRIBIR("El numero es negativo no se puede hacer el calculo");
+FIN

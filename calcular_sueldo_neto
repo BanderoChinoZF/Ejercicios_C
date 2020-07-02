@@ -1,0 +1,46 @@
+//CALCULAR EL PAGO NETO DE UN TRABAJADOR
+
+//ALGORITMO
+1.- Solicitar al usuario cuantas horas trabajo el empleado.
+2.- Ingresar a cuanto se paga cada hora de trabajo.
+3.- El usuario deberá ingresar la tasa de impuesto a su sueldo.
+4.- Se realiza la multiplicacion para obtener el sueldo (horasTrabajas)X(tarifaHoraria).
+5.- Realizamos las operaciones para obtener el valor del impuesto.
+6.- Se hace una resta del impuesto al sueldo que se calculo.
+7.- Mostramos en pantalla el sueldo neto del trabajador, despues de descontar impuestos.
+
+
+
+//PSEUDOCÓDIGO
+ALGORITMO "Calculo de paga neta del empleado"
+VAR
+	DOUBLE ht;
+	DOUBLE th;
+	DOUBLE imp;
+	DOUBLE sueldoNeto;
+	DOUBLE aux1;
+	DOUBLE aux2;
+INICIO
+	ESCRIBIR("Ingresa las horas trabajadas: ");
+	LEER(ht);
+	ESCRIBIR("Cual es la tarifa horaria? ");
+	LEER(th);
+	ESCRIBIR("Cual es la tasa de impuesto?");
+	LEER(imp);
+	
+	aux1 <- ht * th;
+	aux2 <- aux1 * imp;
+	
+	sueldoNeto <- aux1 * aux2;
+	
+	ESCRIBIR("El sueldo neto es: " + sueldoNeto)
+FIN
+	
+	
+	
+	
+	
+	
+	
+	
+	

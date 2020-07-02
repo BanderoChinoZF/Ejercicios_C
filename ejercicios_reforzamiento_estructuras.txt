@@ -1,0 +1,202 @@
+//SERIE DE EJERCICIOS PARA REFORZAMIENTO DE ESTRUCTURAS REPETITIVAS
+
+//EJERCICIO #1
+ALGORITMO "ADIVINA EL NUMERO"
+VAR
+	INT intentos=10;
+	INT num1, num2;
+	INT contador;
+	INT errados;
+	INT media;
+	INT acumulado;
+
+INICIO PROGRAMA
+
+	ESCRIBIR("ADIVINA EL NUMERO QUE ESTOY PENSANDO");
+	ESCRIBIR("PERSONA 1, INGRESE UN NUMERO -> ");
+	LEER(num1);
+
+	MIENTRAS(intentos NO ES IGUAL A 10)
+		ESCRIBIR("PERSONA 2 INGRESE UN NUMERO -> ");
+		LERR(num2);
+
+		SI(num2 ES MAYOR QUE num1)
+			ESCRIBIR("EL NUMERO INGRESADO ES MAYOR")
+
+			contador++;
+			errados++;
+			intetos--;
+			acumulado = acumulado + num2;
+
+			ESCRIBIR("TE QUEDAN ->" + intentos + " INTENTOS.");
+
+		 SI NO(num2 ES MENOR QUE num1)
+		 	ESCRIBIR("EL NUMERO INGRESADO ES MENOR")
+
+			contador++;
+			errados++;
+			intetos--;
+			acumulado = acumulado + num2;
+
+			ESCRIBIR("TE QUEDAN ->" + intentos + " INTENTOS.");
+
+		ENTONCES
+			ESCRIBIR("EL NUMERO INGRESADO ES EL CORRECTO, ADIVINASTE EL NUMERO")
+
+			contador++;
+			errados++;
+			intetos--;
+			acumulado = acumulado + num2;
+
+			ESCRIBIR("ADIVINASTE EN " + intentos + " INTENTOS.");
+
+			media = acumulado/contador;
+
+			ESCRIBIR("LA MEDIA ES -> " + media);
+
+
+	SI(intentos ES IGUAL A 10)
+		ESCRIBIR("NO ADIVINASTE EL NUMERO, SE ACABARON LOS INTENTOS");
+
+		media = acumulado/contador;
+
+		ESCRIBIR("LA MEDIA ES -> " + media);
+
+FIN PROGRAMA
+
+
+//EJERCICIO #2
+ALGORITMO "INTRODUCIR NUMEROS HASTA ENCONTRAR UN CERO"
+VAR
+	INT num1=0;
+	INT acumulado;
+	INT contador;
+	INT media;
+
+INICIO PROGRAMA
+
+	MIENTRAS(num1 NO SEA IGUAL A 0)
+		ESCRIBIR("POR FAVOR INGRESE UN NUMERO: ");
+		LEER(num1);
+
+		acumulado = acumulado + num1;
+		contador++;
+
+	ESCRIBIR("SE HA INTRODUCIDO UN CERO '0' ");
+
+	media = acumulado/contador;
+
+	ESCRIBIR("LA SUMA DE TODOS LOS NUMEROS ES: " + acumulado );
+	ESCRIBIR("LA MEDIA DE NUMEROS INGRESADOS ES: "+ media);
+
+FIN PROGRAMA
+
+//EJERCICIO #3
+ALGORITMO "PEDIR NUMEROS Y CLASIFICARLOS"
+VAR
+	INT contador1;
+	INT contador2;
+	INT contador3;
+	INT numero;
+	INT num;
+
+INICIO PROGRAMA
+
+	ESCRIBIR("¿CUANTOS NUMERO DESEA INGRESAR?");
+	LEER(numero);
+
+	PARA i<-1 HASTA numero
+		ESCRIBIR("INGRESE UN NUMERO -> ");
+		LEER(num);
+
+		SI(num ES MAYOR A 0)
+			contador1++;
+		SI NO(num ES MENOR A 0)
+			contador2++;
+		ENTONCES
+			contador3++;
+
+	FIN
+
+	ESCRIBIR("HAY " + contador1 + " NUMEROS MAYORES A CERO.");
+	ESCRIBIR("HAY " + contador2 + " NUMEROS MENORES A CERO.");
+	ESCRIBIR("HAY " + contador3 + " NUMEROS IGUALES A CERO.");
+
+FIN PROGRAMA
+
+//EJERCICIO 4
+ALGORITMO "DETECTAR SI EL CARACTER INGRESADO ES VOCAL"
+VAR
+	CHAR caracter;
+
+INICIO PROGRAMA
+
+	MIENTRAS(caracter NO ES IGUAL A ' ')
+
+		ESCRIBIR("INGRESA UNA LETRA");
+		LEER(caracter);
+
+		SWITCH(caracter)
+			CASE 'A':
+				ESCRIBIR("ES UNA VOCAL");
+			CASE 'E':
+				ESCRIBIR("ES UNA VOCAL");
+			CASE 'I':
+				ESCRIBIR("ES UNA VOCAL");
+			CASE 'O':
+				ESCRIBIR("ES UNA VOCAL");
+			CASE 'U':
+				ESCRIBIR("ES UNA VOCAL");
+			DEFAULT:
+				ESCRIBIR("NO ES UNA VOCAL");
+	FIN
+
+FIN PROGRAMA
+
+//EJERCICIO 5
+ALGORITMO "IMPRIMIR LOS NUMEROS PARES EN UN RANGO"
+VAR
+	INT num1;
+	INT num2;
+
+INICIO PROGRAMA
+
+	ESCRIBIR("PROGRAMA PARA IMPRIMIR NUMEROS PARES EN UN RANGO [a,b]");
+
+	ESCRIBIR("INGRESA UN NUMERO: ");
+	LEER(num1);
+	ESCRIBIR("INGRESA UN NUMERO MAYOR QUE EL ANTERIOR: ");
+	LEER(num2);
+
+	PARA i<-num1 HASTA num2
+
+		//NOS APOYAMOS DEL OPERADOR %
+		SI(i%2 == 0)
+			ESCRIBIR(i);
+
+	FIN
+
+FIN PROGRAMA
+
+//EJERCICIO 6 
+ALGORITMO "TABLA DE MULTIPLICAR DE UN NUMERO CUALQUIERA"
+VAR 
+	INT resultado;
+	INT numero;
+
+INICIO PROGRAMA
+	
+	ESCRIBIR("INGRESE UN NUMERO, Y MOSTRAR SU TABLA DE MULTIPLICAR");
+	LEER(numero);
+
+	PARA i<-1 HASTA 10
+		resultado = numero*i;
+		ESCRIBIR(numero + " X " + i + " = " + resultado)
+	FIN
+
+FIN PROGRAMA
+
+
+
+
+
